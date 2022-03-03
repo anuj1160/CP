@@ -30,9 +30,9 @@ void solve()
 }
 int main()
 {
-    int t=1;
+    int x=1;
     // cin >> t;
-    while (t--)
+    while (x--)
     {
         solve();
     }
