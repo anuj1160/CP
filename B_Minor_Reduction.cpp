@@ -8,48 +8,27 @@ ll ar = LLONG_MAX;
 ll mod = 1e9 + 7;
 void solve()
 {
-    ll x;
-    cin >> x;
-    string s = "";
-    ll k = x;
-    ll sum = 0;
-    int p = 0;
-    ll r = 0;
-    ll n = log10(x) + 1;
-    bool flag = true;
-    while (k > 0)
+    string s;
+    cin >> s;
+    int sum;
+    int k = 0;
+    for (int i = s.size() - 1; i > 0; i--)
     {
-        p++;
-        sum += k % 10;
-        s = to_string(k % 10) + s;
-        k = k / 10;
-        r++;
-
-        if (p == 2)
+        sum = s[i] - 48 + s[i - 1] - 48;
+        if (sum > 9)
         {
-            if (sum >= 10)
-            {
-                s.pop_back();
-                s.pop_back();
-                s = to_string(sum) + s;
-                flag = false;
-            }
-            sum = 0;
-            p = 0;
-        }
-        else if (r == n)
-        {
-
-            if (flag)
-            {
-                s.pop_back();
-                s.pop_back();
-                s = to_string(sum) + s;
-            }
+            s.replace(i-1,2,to_string(sum));
+            k++;
             break;
         }
+        
     }
-    cout << s << endl;
+    if(k==0)
+    {
+        sum=s[0]-48+s[1]-48;
+        s.replace(0,2,to_string(sum));
+    }
+    cout<<s<<endl;
 }
 
 int main()
