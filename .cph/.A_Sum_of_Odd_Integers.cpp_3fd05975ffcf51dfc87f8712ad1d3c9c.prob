@@ -1,0 +1,1 @@
+{"name":"Local: A_Sum_of_Odd_Integers","url":"e:\\c programming\\CP\\A_Sum_of_Odd_Integers.cpp","tests":[{"id":1650899226213,"input":"7\n3 1\n4 2\n10 3\n10 2\n16 4\n16 5\n241 23","output":"YES\nYES\nNO\nYES\nYES\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\c programming\\CP\\A_Sum_of_Odd_Integers.cpp","group":"local","local":true}
